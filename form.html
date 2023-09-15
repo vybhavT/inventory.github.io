@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+var subjectObject = {
+  "Front-end": {
+    "HTML": ["Links", "Images", "Tables", "Lists"],
+    "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+    "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]    
+  },
+  "Back-end": {
+    "PHP": ["Variables", "Strings", "Arrays"],
+    "SQL": ["SELECT", "UPDATE", "DELETE"]
+  }
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+  var chapterSel = document.getElementById("chapter");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    chapterSel.length = 1;
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+  topicSel.onchange = function() {
+    //empty Chapters dropdown
+    chapterSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="ding.css">
+
+
+<div class="main-bar">
+
+<h1 style="font-size:60px; background-color:#0b0b0b ;text-decoration-line: underline; text-decoration-color: #eee; color: white;">INVENTORY MANAGEMENT</h1>
+  
+
+</head>
+<body>
+  
+   <style>
+    .main-bar{
+        text-align: center;
+    }
+    
+   </style>
+      
+
+  </div>
+  <div class="product-bar">
+  <ul>
+  
+  <li><a href="home.html">HOME</a></li>
+  <li><a href="#">CATEGORY</a>
+    <div class="sub-menu-1">
+      <ul>
+        <li><a href="mobiles.html">MOBILE</a></li>
+        <li><a href="chargers.html">CHARGERS</a></li>
+        <li><a href="headphones.html">HEADPHONES</a></li>
+        <li><a href="smartband.html">SMARTBANDS</a></li>
+        <li><a href="#">NECKBANDS</a></li>
+        <li><a href="#">SMARTWATCHES</a></li>
+        <li><a href="#">TABLETS</a></li>
+        <li><a href="#">BACK-CASES</a></li>
+        <li><a href="#">SCREENGAURDS</a></li>
+      </ul>
+
+
+    </div>
+  
+  
+  
+  </li>
+  <li><a href="#">PRODUCT</a>
+    
+   <div class="sub-menu-1">
+     <ul>   
+             <li><a href="#">SAMSUNG</a>
+               <div class="sub-menu-2">
+                 <ul>
+                    <li><a href="mobile.html">MOBILE</a></li>
+                    <li><a href="#">CHARGERS</a></li>
+                    <li><a href="#">EARPHONES</a></li>
+                    <li><a href="#">WATCHES</a></li>
+                    <li><a href="#">TV'S</a></li>
+                 </ul>
+               </div>
+             </li>
+       
+             <li><a href="#">APPLE</a>
+                <div class="sub-menu-2">
+                    <ul>
+                        <li><a href="#">MOBILE</a></li>
+                        <li><a href="#">MAC BOOKS</a></li>
+                        <li><a href="#">TABS</a></li>
+                        <li><a href="#">WATCHES</a></li>
+                        <li><a href="#">MONITORS</a></li>
+                    </ul>
+                 </div>   
+             </li>
+
+             <li><a href="#">REALME</a>
+                <div class="sub-menu-2">
+                    <ul>
+                        <li><a href="#">MOBILE</a></li>
+                        <li><a href="#">ACCESSORIES</a></li>
+                        <li><a href="#">EARPHONES</a></li>
+                        <li><a href="#">WATCHES</a></li>
+                        <li><a href="#">TV'S</a></li>
+                    </ul>
+                </div>
+             </li>
+
+
+
+             <li><a href="#">VIVO</a>
+                <div class="sub-menu-2">
+                    <ul>
+                        <li><a href="#">MOBILE</a></li>
+                        <li><a href="#">CHARGERS</a></li>
+                        <li><a href="#">EARPHONES</a></li>
+                        <li><a href="#">SMARTBANDS</a></li>
+                        <li><a href="#">BLUETOOTHS</a></li>
+                    </ul>
+                 </div>   
+              </li>
+     </ul>
+   </div>
+  
+      
+    
+
+
+  <li><a href="#">SERVICESES</a></li>
+  <li><a href="#">PERMISSIONS</a></li>
+  <li><a href="#">WAREHOUSE</a>
+    <div class="sub-menu-1">
+        <ul>
+          <li><a href="#">WAREHOUSE-1</a>
+          
+           <div class="sub-menu-2">
+            <ul>
+               <li><a href="form.html">ALTER</a></li>
+              
+
+            </ul>
+
+           </div>
+
+                   
+          </li>
+          <li><a href="#">WAREHOUSE-2</a>
+            <div class="sub-menu-2">
+              <ul>
+                 <li><a href="form.html">ALTER</a></li>
+                
+  
+              </ul>
+  
+             </div>
+          
+          
+          </li> 
+
+        </ul>
+
+    </div>
+  
+  
+  </li>
+
+  <li><a href="#">LOGOUT</a></li>
+  <li><a href="contacts.html">CONTACTS</a></li>
+  </ul> 
+</div>
+
+
+  
+</body>
+</html>  
+
+
+    
+
+
+<style>
+.form-bar{
+margin: 0px;
+align-items: center;
+margin-left: 450px;
+width: 30ps;
+font-size: 60px;
+}
+.form-a-bar{
+  font-size: 20px;
+}
+</style>
+<div class="">
+  <style>
+    .product-company{
+      font-size: 80px;
+    }
+  </style>
+</div>
+<div class="form-a-bar">
+  <style>
+    .form-a-bar{
+      font-size: 30px;
+      margin-top: 20px;
+      margin-left:10px ;
+      cursor: pointer;
+    
+    }
+  </style>
+<form name="form1" id="form1" action="/action_page.php">
+Product-company: <select class="form-a-bar" name="product company" id="product company">
+    <option value="" selected="selected">apple</option>
+    <option value="" selected="selected">samsung</option>
+    <option value="" selected="selected">realme</option>
+    <option value="" selected="selected">redmi</option>
+    <option value="" selected="selected">oppo</option>
+  </select>
+  <br><br>
+product: <select class="form-a-bar" name="product" id="prodct">
+    <option value="" selected="selected">mobiles</option>
+    <option value="" selected="selected">chargers</option>
+    <option value="" selected="selected">headphones</option>
+    <option value="" selected="selected">smart bands</option>
+    <option value="" selected="selected">cases</option>
+  </select>
+  <br><br>
+action: <select class="form-a-bar" name="action" id="action">
+    <option value="" selected="selected">add</option>
+    <option value="" selected="selected">remove</option>
+  </select>
+  <br><br>
+  count: 
+  <input class="form-a-bar" type="number"  value="Doe"><br><br>
+  <input class="form-a-bar" type="submit" value="Submit">  
+</form>
+
+</div>
+</body>
+</html>
